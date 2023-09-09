@@ -1,4 +1,4 @@
-package config;
+package homero.java;
 import org.json.JSONObject;
 public class Torneo {
 	private String host = "hornero2.fi.uncoma.edu.ar";
