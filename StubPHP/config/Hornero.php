@@ -1,14 +1,17 @@
 <?php
 class Hornero {
-        public $token;
-        public $problema;
-        public $tokenSolicitud;
-        public $host = 'hornero.fi.uncoma.edu.ar'; // Pide los parámetros al servidor
-        //public $host = 'localhost/yii/hornero'; // Para test local
+        private $token;
+        private $problema;
+        private $tokenSolicitud;
+        private $host = 'hornero.fi.uncoma.edu.ar';
+        //private $host = 'localhost/yii/hornero'; // Para test local
+        
+        // Constructor de la clase
         public function __construct($problema,$token) {
                 $this->problema = $problema;
                 $this->token=$token;
         }
+        // Ejecuta la solicitud al servidor
         public function solicitud() {
                 $urlsolicitud = "http://" . $this->host
                         . "/api/jugar/solicitud?token=" . $this->token
@@ -18,7 +21,6 @@ class Hornero {
                 $handle = fopen($urlsolicitud, 'r');
                 $json = fgets($handle);
                 $solicitud = json_decode($json);
-                //echo '<pre>';  print_r($solicitud);
                 echo("\n================================\n");
                 foreach ($solicitud as $clave => $valor) {
                         echo("- " . $clave . ": " . $valor . "\n");
@@ -27,6 +29,7 @@ class Hornero {
                 $parametros = explode(',', $solicitud->parametrosEntrada);
                 return ($parametros);
         }
+        // Obtiene la raspuesta del servidor
         public function respuesta($respuesta) {
                 $urlrespuesta = "http://" . $this->host
                         . "/api/jugar/respuesta?tokenSolicitud=" . $this->tokenSolicitud
