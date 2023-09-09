@@ -3,7 +3,7 @@ Stubs para Hornero-Zorzal
 
 -------------------------------------------------------------------------------
 
-## Para Hacer:
+## Para Hacer
 
 - [x] StubPHP
 - [ ] StubJava
