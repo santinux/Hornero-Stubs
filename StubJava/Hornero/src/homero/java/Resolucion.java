@@ -6,18 +6,22 @@ public class Resolucion {
         // Colocar aquí el número de problema
         public String numeroProblema = "1";
 
-        // Desarrolle aquí su resolución al problema, los parámetros son de
-        // tipo String y la respuesta debe ser de tipo String
-        public String miResolucion(String parametro1, String parametro2)
+        // Desarrolle aquí su resolución al problema
+        // `parametrosProblema` es un array de tipo String.
+        // `miRespuesta` debe ser de tipo String.
+        public String miResolucion(String[] parametrosProblema)
         {
+                // Obtenemos los parámetros necesarios para el problema
+                int numero1 = Integer.parseInt(parametrosProblema[0]);
+                int numero2 = Integer.parseInt(parametrosProblema[1]);
+
                 // Ejemplo: solución al problema de la suma de dos números.
-                // En este caso, es necesario primero convertir String a int,
-                // realizar la suma y luego devolver un String
+                // En este caso, arriba convertimos String a int, ahora
+                // computamos la suma y luego devolvemos un String
+                int suma = numero1 + numero2;
 
-                int suma = Integer.parseInt(parametro1) + Integer.parseInt(parametro2);
-
-                String respuesta = String.valueOf(suma);
-                
-                return (respuesta);
+                // Convertimos la suma a String y devolvemos la respuesta
+                String miRespuesta = String.valueOf(suma);
+                return (miRespuesta);
         }
 }

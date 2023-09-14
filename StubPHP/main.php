@@ -16,7 +16,7 @@ $hornero = new Hornero($problema, $token);
 $parametros = $hornero->solicitud();
 
 // Ejecutamos la resolución desarrollada por el jugador con los parámetros
-$laRespuesta = $laResolucion->miResolucion($parametros[0], $parametros[1]);
+$laRespuesta = $laResolucion->miResolucion($parametros);
 
 // Enviamos la respuesta al servidor hornero
 $respuesta = $hornero->respuesta($laRespuesta);
