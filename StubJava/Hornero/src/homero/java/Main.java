@@ -21,12 +21,16 @@ public class Main {
                 String respuesta = laResolucion.miResolucion(parametros);
                                 
                 // Mostramos al jugador el resultado devuelto por su algoritmo
+                System.out.println("\n================================");
                 System.out.println("Resultado de su resolución: " + respuesta);
+                System.out.println("================================");
                                 
                 // La respuesta obtenida de su implementacion se envia al torneo
                 String rta = elTorneo.recuperarRespuestaImplementacion(respuesta);
                                 
                 // Se visualizan los resultados de la solucion
-                System.err.println("La respuesta del torneo es: "+ rta);
+                System.out.println("\n================================");
+                System.out.println("La respuesta del torneo es: "+ rta);
+                System.out.println("================================");
         }
 }

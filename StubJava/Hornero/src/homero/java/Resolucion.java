@@ -16,7 +16,7 @@ public class Resolucion {
                 int numero2 = Integer.parseInt(parametrosProblema[1]);
 
                 // Ejemplo: solución al problema de la suma de dos números.
-                // En este caso, arriba convertimos String a int, ahora
+                // En este caso, arriba ya convertimos String a int, ahora
                 // computamos la suma y luego devolvemos un String
                 int suma = numero1 + numero2;
 

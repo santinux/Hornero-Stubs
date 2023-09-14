@@ -23,7 +23,8 @@ public class Torneo {
                 // + this.tokenTorneo + "&problema=" + this.numeroProblema;
                 String url = "http://" + this.host + "/api/jugar/solicitud?token="
                         + this.tokenTorneo + "&problema=" + this.numeroProblema;
-                System.out.println(url);
+		System.out.println("================================");
+                System.out.println("URL Solicitud:\n" + url);
 		String[] rs = null;
 		try {
 			String respuesta = this.conexionHTTP.sendGet(url);
@@ -54,8 +55,10 @@ public class Torneo {
 		String respuesta = "";
 		String mensajeRta = "";
 		try {
-			System.out.println(url);
-			respuesta = this.conexionHTTP.sendGet(url);
+                        System.out.println(url);
+                        respuesta = this.conexionHTTP.sendGet(url);
+                        System.out.println("================================");
+                	System.out.println("URL Respuesta:\n" + url);
 			System.out.println(respuesta);
 			JSONObject jsonObject = new JSONObject(respuesta);
 
